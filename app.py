@@ -11,10 +11,16 @@ load_dotenv()
 app = Flask(__name__)
 
 # Set up OpenAI model
-model = ChatOpenAI(model="gpt-4")
+model = ChatOpenAI(model="gpt-3.5-turbo")
 
 @app.route('/')
-def index():
+def landing_page():
+    # Render the new landing page
+    return render_template('landing.html')
+
+@app.route('/form')
+def form_page():
+    # Render the form page when "Get Started" is clicked
     return render_template('form.html')
 
 @app.route('/generate', methods=['POST'])
