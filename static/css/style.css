@@ -1,0 +1,311 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(315deg, rgb(102, 93, 101) 3%, rgb(88, 100, 110) 38%, rgb(58, 87, 85) 68%, rgb(114, 52, 52) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/* Keyframes for the gradient animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Full-width sections */
+.full-width {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 50px; /* Extra space to avoid hiding content behind the navbar */
+}
+
+.full-width > * {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Box containing the text content */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Soft white transparent box */
+    padding: 40px;
+    border-radius: 20px; /* Smoother, more rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Lighter shadow for a soft look */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Title styling */
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #cfc9ff;
+}
+
+/* Link button styling */
+a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6a80f5; /* Light purple/blue for the button */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #5c6bde; /* Slightly darker shade on hover */
+}
+
+/* Background wave effect (Dark Grey Version) */
+.wave {
+    background: rgb(50,50,50); /* Dark grey color */
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.7;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.6;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+/* Team Excel Section */
+.team-excel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.team-excel-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.team-text {
+    max-width: 60%;
+}
+
+.team-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.team-text p {
+    font-size: 1.2rem;
+    color: #cfc9ff;
+}
+
+/* Team image styling */
+.team-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    object-fit: cover;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 250px;
+}
+
+/* HOW DOES IT WORK Section */
+.how-it-works {
+    text-align: center;
+    color: #ffffff;
+}
+
+.how-it-works-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.how-it-works h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Steps container: Horizontal alignment */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+/* Individual step styling */
+.step {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.step img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #cfc9ff;
+    margin-top: auto;
+}
+
+/* RESULTS Section */
+.results-section {
+    text-align: center;
+    color: #ffffff;
+}
+
+.results-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.results-box h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.stat p {
+    font-size: 1.2rem;
+    color: #cfc9ff;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+footer .footer-box p {
+    font-size: 1.2rem;
+}
