@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | Brainstorming Assistant</title>
+        <link rel="stylesheet" href="/static/css/login.css">
+        <link rel="stylesheet" href="/static/css/elements.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        <!-- Waves at the bottom -->
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+
+        <!-- Login Form Wrapper -->
+        <div class="form_container">
+            <form action="#">
+                <h2>Login</h2>
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required>
+                    <label>Enter your password</label>
+                </div>
+                <div class="forget">
+                    <label for="remember">
+                        <input type="checkbox" id="remember">
+                        <small>Remember me</small>
+                    </label>
+                    <a href="#"><span>Forgot password?</span></a>
+                </div>
+                <button type="submit">Log In</button>
+
+                <!-- New Login as Guest Button -->
+                <button type="button" class="guest-button" onclick="loginAsGuest()">Login as Guest</button>
+
+                <div class="register">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            // Function for Guest Login
+            function loginAsGuest() {
+                window.location.href = '/guest-login'; // Adjust the URL to where you want to route guest users
+            }
+        </script>
+    </body>
+</html>

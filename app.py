@@ -23,6 +23,11 @@ def form_page():
     # Render the form page when "Get Started" is clicked
     return render_template('form.html')
 
+@app.route('/login')
+def login_page():
+    # Render the form page when "Get Started" is clicked
+    return render_template('login.html')
+
 @app.route('/generate', methods=['POST'])
 def generate_ideas():
     # Get data from the form
